@@ -1,4 +1,4 @@
-from Method6 import *
+from lab6.Method6 import *
 import copy
 
 
