@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import classification_report, confusion_matrix
 
-class Method6:
+class Сlassification:
     def logistic(x_, y_):
         start = time.time()
 
@@ -321,14 +321,14 @@ class Method6:
 # x5, y5 = make_classification(n_samples = 500, n_features = 4, class_sep = 0.5, random_state = 0)
 # Задание 1
 # print(x1, y1)
-# Method6.logistic(x1, y1)
+# Сlassification.logistic(x1, y1)
 
 # # Задание 2
-# Method6.logistic_rbf(x1, y1)
+# Сlassification.logistic_rbf(x1, y1)
 # # Задание 3
-# Method6.lin_with_l1(x1, y1)
+# Сlassification.lin_with_l1(x1, y1)
 # # Задание 4
 
-# x = Method6.funcForInput()
+# x = Сlassification.funcForInput()
 # print(x)
-# Method6.opornieVectora(x)
+# Сlassification.opornieVectora(x)
