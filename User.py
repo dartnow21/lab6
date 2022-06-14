@@ -95,5 +95,5 @@ class User:
             print('Введен неверный номер')
 
 
-functionss = User()
-functionss.userAnswer()
+# functionss = User()
+# functionss.userAnswer()
