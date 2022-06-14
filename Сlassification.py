@@ -23,14 +23,31 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 class Сlassification:
     def logistic(x_, y_):
-        start = time.time()
+        
+        """
+        Функция, реализующая модель классификации на два класса на основе логистической регрессии.
 
+        Parameters
+        ----------
+        x_, y_: numpy array
+            Массивы обучающей переменной и предсказываемой
+
+        Returns
+        -----------
+        Accuracy, Precision, Recall, Коэффициенты регрессии, Массив предсказанных значений, График классификации
+        """
+        
+        start = time.time()
+        
+#         Массивы обучающей переменной и предсказываемой, разделенные на обучающую и тестовую выборки
         x_train, x_test, y_train, y_test = train_test_split(x_, y_, test_size=0.2, random_state=0)
         x = x_
         y = y_
 
         cls = LogisticRegression(max_iter=10000)
         cls.fit(x_train, y_train)
+        
+#         Массив предсказанных значений
         y_pred = cls.predict(x_test)
 
         print('Accuracy = ', metrics.accuracy_score(y_test, y_pred))
@@ -74,35 +91,28 @@ class Сlassification:
     def logistic_rbf(x_, y_):
 
         """
-        Функция, реализующая модель классификации на два класса на основе логистической регрессии.
-
+        Функция, реализующая модель классификации на два класса на основе логистической регрессии с радиальными базисными функциями.
+        
         Parameters
         ----------
         x_, y_: numpy array
             Массивы обучающей переменной и предсказываемой
 
-
-        x_train, x_test, y_train, y_test: numpy array
-            Массивы обучающей переменной и предсказываемой, разделенные на обучающую и тестовую выборки
-
-        y_pred: numpy array
-            Массив предсказанных значений
-
         Returns
         -----------
-        dicc: dict
-            Словарь вида {x_test: y_pred}, тестовое значение переменной х сопоставляется с предсказанным значением переменной y
-
+        Accuracy, Precision, Recall, Коэффициенты регрессии, Массив предсказанных значений, График классификации
 
         """
         start = time.time()
-
+        
+#         Массивы обучающей переменной и предсказываемой, разделенные на обучающую и тестовую выборки
         x_train, x_test, y_train, y_test = train_test_split(x_, y_, test_size=0.2, random_state=0)
         x = x_
         y = y_
 
         cls = SVC(kernel='rbf')
         cls.fit(x_train, y_train)
+#         Массив предсказанных значений
         y_pred = cls.predict(x_test)
 
         print('Accuracy = ', metrics.accuracy_score(y_test, y_pred))
@@ -145,35 +155,28 @@ class Сlassification:
     def lin_with_l1(x_, y_):
 
         """
-        Функция, реализующая модель классификации на два класса основе логистической регрессии.
+        Функция, реализующая модель классификации на два класса на основе логистической регрессии с регуляризацией L1
 
         Parameters
         ----------
         x_, y_: numpy array
             Массивы обучающей переменной и предсказываемой
 
-
-        x_train, x_test, y_train, y_test: numpy array
-            Массивы обучающей переменной и предсказываемой, разделенные на обучающую и тестовую выборки
-
-        y_pred: numpy array
-            Массив предсказанных значений
-
         Returns
         -----------
-        dicc: dict
-            Словарь вида {x_test: y_pred}, тестовое значение переменной х сопоставляется с предсказанным значением переменной y
-
+        Accuracy, Precision, Recall, Коэффициенты регрессии, Массив предсказанных значений, График классификации
 
         """
         start = time.time()
-
+#         Массивы обучающей переменной и предсказываемой, разделенные на обучающую и тестовую выборки
         x_train, x_test, y_train, y_test = train_test_split(x_, y_, test_size=0.2, random_state=0)
         x = x_
         y = y_
 
         cls = LogisticRegression(penalty='l1', solver='liblinear')
         cls.fit(x_train, y_train)
+        
+#         Массив предсказанных значений
         y_pred = cls.predict(x_test)
 
         print('Accuracy = ', metrics.accuracy_score(y_test, y_pred))
@@ -223,7 +226,6 @@ class Сlassification:
         ----------
         dictionary: dictionary
             Словарь со всеми переменными, которые ранее были введены в функции vvod
-
 
         Returns
         -----------
