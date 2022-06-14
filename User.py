@@ -1,4 +1,4 @@
-from lab6.Method6 import *
+from lab6.Сlassification import *
 import copy
 
 
@@ -39,7 +39,7 @@ class User:
 
             x1, y1 = make_classification(n_samples=n_samp, n_features=n_feat, class_sep=class_s, random_state=random_s)
 
-            Method6.logistic(x1, y1)
+            Сlassification.logistic(x1, y1)
 
         # Функция, реализующая модель классификации на два класса на основе логистической регрессии с
         # радиальными базисными функциями
@@ -59,7 +59,7 @@ class User:
 
             x1, y1 = make_classification(n_samples=n_samp, n_features=n_feat, class_sep=class_s, random_state=random_s)
 
-            Method6.logistic_rbf(x1, y1)
+            Сlassification.logistic_rbf(x1, y1)
 
         # Функция, реализующая модель классификации на два класса на основе логистической регрессии с "
         # регуляризацией L1
@@ -79,17 +79,17 @@ class User:
 
             x1, y1 = make_classification(n_samples=n_samp, n_features=n_feat, class_sep=class_s, random_state=random_s)
 
-            Method6.logistic_rbf(x1, y1)
+            Сlassification.logistic_rbf(x1, y1)
 
         # Функция, реализующая модель классификации на два класса на основе метода опорных векторов
 
         elif user_answer == 4:
             print("Эта функция запускается на автоматически генерируемых данных")
 
-            x = Method6.funcForInput()
+            x = Сlassification.funcForInput()
             print("Сгенерироавнные данные: ")
             print(x)
-            Method6.opornieVectora(x)
+            Сlassification.opornieVectora(x)
 
         else:
             print('Введен неверный номер')
