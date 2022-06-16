@@ -7,9 +7,9 @@
 
 ## Документация проекта 
 
-Документация: 
+Документация: https://github.com/dartnow21/lab6/blob/main/TZ6.docx
 
-Тесты: 
+Тесты: https://github.com/dartnow21/lab6/blob/main/Metod6%20(1).docx
 
 ## Демонстрация возможностей программы
 
